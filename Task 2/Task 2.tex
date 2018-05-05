@@ -1,0 +1,119 @@
+\documentclass[12pt]{report}
+\usepackage{pgf}
+\usepackage{pgfpages}
+\usepackage{graphicx}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{2pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+
+\pgfpagesuselayout{boxed}
+
+
+\begin{document}
+
+\begin{titlepage}
+   \vspace*{\stretch{1.0}}
+   \begin{center}
+      \Large\textbf{Assignment No. 2}\\
+      \large\textit{Archan Mehta (201711014)}
+      \large\textit{\\*Dharit Parikh (201711022)}
+   \end{center}
+   \vspace*{\stretch{2.0}}
+\end{titlepage}
+
+\begin{center}
+\begin{enumerate}
+
+\item Implement the Histogram specification algorithm using the two approaches discussed
+in class: (a) via T−12· T1, and (b) exact histogram specification. Name the two files
+myhistspec.m and myexacthistspec.m. In the first case, the input to the function
+should be two vectors pR and pS, the input and specified distribution functions, each of
+size L × 1, while the output should be a vector containing T−12· T1(rk), k = 0, . . . , L − 1.
+In the second case, the input to the function should be an image I, the specified distribution
+function pS as an L × 1 vector, and k, the number of neighborhoods to be
+considered for inducing a total order on the pixels. The neighborhoods used should
+be of size (2j + 1) × (2j + 1), j = 1, . . . , k. The output of this function should be the
+output image with the desired distribution pS, only if the given k number of neighborhoods
+induce a total order. Otherwise, the function should simply give out the error
+message: The neighborhoods do not induce a total order on the pixels of
+the given image.
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{1_a.JPG}
+\caption{Original Image 1}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{1_b.jpg}
+\caption{Histogram of Original Image 1}
+\end{figure}
+
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{1_c.jpg}
+\caption{Equalized Image 1}
+\end{figure}
+
+
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{1_d.jpg}
+\caption{Histogram Of Equalizaed Image 1}
+\end{figure}
+
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{1_a_1.JPG}
+\caption{Original Image 2}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{1_b_1.jpg}
+\caption{Histogram of Original Image 2}
+\end{figure}
+
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{1_c_1.jpg}
+\caption{Equalized Image 2}
+\end{figure}
+
+
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{1_d_1.jpg}
+\caption{Histogram Of Equalizaed Image 2}
+\end{figure}
+
+
+\pagebreak
+
+
+
+\end{enumerate}
+\end{center}
+
+\end{document}
