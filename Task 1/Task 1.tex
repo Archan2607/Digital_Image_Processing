@@ -1,0 +1,76 @@
+\documentclass[12pt]{report}
+\usepackage{pgf}
+\usepackage{pgfpages}
+\usepackage{graphicx}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{2pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+
+\pgfpagesuselayout{boxed}
+
+
+\begin{document}
+
+\begin{titlepage}
+   \vspace*{\stretch{1.0}}
+   \begin{center}
+      \Large\textbf{Assignment No. 1}\\
+      \large\textit{Archan Mehta (201711014)}
+      \large\textit{\\*Dharit Parikh (201711022)}
+   \end{center}
+   \vspace*{\stretch{2.0}}
+\end{titlepage}
+
+\begin{center}
+\begin{enumerate}
+
+\item Write a MATLAB function myresize.m which can scale an input image to any given size (M,N). Use bilinear interpolation for this purpose. Show couple of results in your report
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{assign1out.JPG}
+\caption{300x250 image resize}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{assign1out2.jpg}
+\caption{900x850 image resize}
+\end{figure}
+
+\pagebreak
+
+\item Write a MATLAB function myrotate.m which can roate an input image at any user specified angle about the center of the image. Show a couple of results in your report and verify whether rotating any image n times by an angle \[\theta = \frac{2\pi}{n}\]
+for some fixed n, yields the original image or not.
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{assign2.jpg}
+\caption{rotated image}
+\end{figure}
+
+
+\end{enumerate}
+\end{center}
+
+\end{document}
